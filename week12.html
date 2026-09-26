@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  
+  <!-- Splide CSS（自分のCSSより前に読み込む） -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ヘッダー -->
+  <header class="bg-indigo-600 text-white py-12 text-center shadow-lg">
+    <h1 class="text-4xl font-bold mb-2">リオのポートフォリオ</h1>
+    <p class="text-lg text-indigo-200">POSSEでプログラミングを学んでいます</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
+
+    <!-- 自己紹介 -->
+    <section id="about" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-600">自己紹介</h2>
+      <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+        <p class="text-gray-700 leading-relaxed text-lg">
+          こんにちは！Web制作を学んでいます。<br>
+          POSSEプログラムを通じて、HTML・CSS・JavaScriptの基礎から実践的なスキルまで習得中です。<br>
+          このポートフォリオは、Week12で学んだCSSアニメーションとSplideライブラリを使って作成しました。
+        </p>
+      </div>
+    </section>
+
+    <!-- スキルリスト -->
+    <section id="skills" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-600">スキル</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-indigo-100 text-indigo-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-indigo-300 cursor-pointer">
+          HTML
+        </li>
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-indigo-100 text-indigo-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-indigo-300 cursor-pointer">
+          Tailwind CSS
+        </li>
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-indigo-100 text-indigo-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-indigo-300 cursor-pointer">
+          JavaScript
+        </li>
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-purple-100 text-purple-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-purple-300 cursor-pointer">
+          Responsive Design
+        </li>
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-purple-100 text-purple-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-purple-300 cursor-pointer">
+          Git / GitHub
+        </li>
+        <li class="transition-all duration-300 hover:scale-105 hover:shadow-md
+                   bg-purple-100 text-purple-700 px-4 py-3 rounded-full text-center font-semibold
+                   border border-purple-300 cursor-pointer">
+          CSS Animation
+        </li>
+      </ul>
+    </section>
+
+    <!-- 作品スライダー -->
+    <section id="works" class="scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-600">作品</h2>
+      
+      <!-- 作品スライダー（Splide） -->
+      <section class="splide bg-white rounded-lg shadow-md overflow-hidden" aria-label="作品スライダー">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <!-- 作品1: 飲食店メニューサイト -->
+            <li class="splide__slide">
+              <div class="relative group">
+                 <img src="メニュー.png" 
+                   alt="飲食店メニューサイト" class="w-full h-96 object-contain bg-white">
+                <div class="absolute inset-0 bg-black/50
+                            opacity-0 group-hover:opacity-100
+                            transition-opacity duration-300
+                            flex items-center justify-center">
+                  <div class="text-center">
+                    <span class="text-white font-bold text-lg">飲食店メニューサイト</span>
+                    <p class="text-white text-sm mt-2">HTML / Tailwind CSS / グリッドレイアウト</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            <!-- 作品2: ユーザー登録フォーム -->
+            <li class="splide__slide">
+              <div class="relative group">
+                 <img src="新規登録.png" 
+                   alt="ユーザー登録フォーム" class="w-full h-96 object-contain bg-white">
+                <div class="absolute inset-0 bg-black/50
+                            opacity-0 group-hover:opacity-100
+                            transition-opacity duration-300
+                            flex items-center justify-center">
+                  <div class="text-center">
+                    <span class="text-white font-bold text-lg">ユーザー登録フォーム</span>
+                    <p class="text-white text-sm mt-2">HTML / Tailwind CSS / フォーム設計</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            <!-- 作品3: GitHub ユーザー検索アプリ -->
+            <li class="splide__slide">
+              <div class="relative group">
+                 <img src="検索.png" 
+                   alt="GitHub検索アプリ" class="w-full h-96 object-contain bg-white">
+                <div class="absolute inset-0 bg-black/50
+                            opacity-0 group-hover:opacity-100
+                            transition-opacity duration-300
+                            flex items-center justify-center">
+                  <div class="text-center">
+                    <span class="text-white font-bold text-lg">GitHub ユーザー検索</span>
+                    <p class="text-white text-sm mt-2">JavaScript / API連携 / 非同期処理</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-gray-800 text-gray-400 text-center py-8 mt-16 border-t border-gray-700">
+    <p class="mb-2">© 2026 rio. All rights reserved.</p>
+    <p class="text-sm">Created with HTML, Tailwind CSS, and Splide.js</p>
+  </footer>
+
+  <!-- Splide JS（bodyの閉じタグ前） -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  
+  <!-- 初期化スクリプト -->
+  <script>
+    new Splide('.splide', {
+      type: 'loop',      // 無限ループ
+      perPage: 1,        // 一度に表示するスライド数
+      autoplay: true,    // 自動再生
+      interval: 4000,    // 自動再生の間隔（ミリ秒）
+      transition: 'fade', // フェード切り替え
+      arrows: true,      // 矢印ボタン表示
+      pagination: true,  // ドット表示
+    }).mount();
+  </script>
+</body>
+</html>
